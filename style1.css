@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+block-content {
+  min-height: 100%;
+}
+/*********************************************** Navbar Section *******************************************/
+
+nav {
+  width: 100%;
+  height: 90px;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  background-color: white;
+  position: fixed;
+  transition: 0.5s;
+  z-index: 1;
+  /*box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);*/
+}
+.nav-pc {
+  display: none;
+}
+nav a {
+  margin: 10px 0px;
+  transition: 0.5s;
+}
+nav a img {
+  height: 60px;
+  transition: 0.5s;
+}
+#nav-check {
+  display: none;
+}
+.check-btn {
+  font-size: 30px;
+  color: #000032;
+  float: right;
+  margin-right: 5%;
+  cursor: pointer;
+}
+.check-btn i {
+  padding: 18px 0;
+  transition: 0.5s;
+}
+.nav-mobile {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  top: 90px;
+  left: -100%;
+  text-align: center;
+  display: inline-block;
+  position: fixed;
+  background: #000032;
+  transition: 0.5s;
+  z-index: 2;
+}
+.nav-mobile a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-mobile a li {
+  list-style: none;
+  padding: 20px 0;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+#nav-check:checked ~ ul {
+  left: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+@media (min-width: 858px) {
+  nav {
+    height: 115px;
+    padding: 10px 20px;
+  }
+  nav a img {
+    margin-top: 10px;
+    height: 70px;
+  }
+  .check-btn {
+    display: none;
+  }
+  .nav-mobile {
+    display: none;
+  }
+  .nav-pc {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+  }
+  .nav-pc li {
+    list-style: none;
+  }
+  .nav-pc li a {
+    line-height: 90px;
+    color: #000089;
+    padding: 5px 7px;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1152px) {
+  nav {
+    padding: 10px 50px;
+  }
+  nav a img {
+    height: 80px;
+  }
+  .nav-pc li a {
+    padding: 5px 12px;
+    font-size: 22px;
+  }
+}
+/******************************************** Scrolling Effect ******************************************/
+.scrolling-active {
+  height: 70px;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  padding: 7px 20px;
+}
+.scrolling-active a {
+  padding: 0;
+  transition: 0.5s;
+}
+.scrolling-active a img {
+  height: 50px;
+  transition: 0.5s;
+}
+.scrolling-active .check-btn i {
+  padding: 12px 0;
+  transition: 0.5s;
+}
+
+.scrolling-active ul {
+  top: 70px;
+}
+
+@media (min-width: 858px) {
+  .scrolling-active {
+    height: 90px;
+  }
+  .scrolling-active a img {
+    height: 60px;
+    margin-left: 10px;
+  }
+  .scrolling-active .nav-pc {
+    top: 0;
+    margin-top: 0;
+  }
+  .scrolling-active .nav-pc li a {
+    line-height: 75px;
+  }
+}
+
+/********************************************* Typing Effect *********************************************/
+.no-mobile {
+  display: none;
+}
+.typewriter {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  margin-top: 350px;
+  margin-right: 3%;
+  float: right;
+  text-transform: uppercase;
+}
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@media (min-width: 700px) {
+  .mobile {
+    display: none;
+  }
+  .no-mobile {
+    display: inline;
+  }
+  .typewriter {
+    margin-top: 450px;
+    font-size: 19px;
+  }
+}
+@media (min-width: 952px) {
+  .typewriter {
+    margin-top: 550px;
+    font-size: 25px;
+  }
+}
+
+/***************************************** Home ISA-VESIT info Section ****************************************/
+.home-info {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 15% 2%;
+  margin: 0;
+}
+
+.home-info-box {
+  width: 92%;
+  background: white;
+  margin: 0 4%;
+  border-radius: 3%;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
+}
+.home-info-heading {
+  padding: 7% 0;
+  text-align: center;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000067;
+}
+
+.home-info-image img {
+  width: 70%;
+  height: 150px;
+  margin: 7% 15%;
+  border: 2px solid black;
+}
+.home-info-desc {
+  margin: 0 15%;
+}
+.home-info-desc p {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bolder;
+  line-height: 14px;
+  background: #f1f1f1;
+  padding: 10px 0;
+}
+.home-info-data {
+  padding: 6% 12%;
+  text-align: center;
+}
+.home-info-data p {
+  padding-top: 5px;
+  font-size: 15px;
+  text-align: justify;
+}
+
+@media (min-width: 476px) and (min-height: 400px) {
+  .home-info-content {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+  .home-info-heading {
+    padding: 4% 0;
+  }
+  .home-info-left {
+    width: 45%;
+    float: left;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+  }
+  .home-info-image img {
+    width: 84%;
+    margin: 1% 8%;
+  }
+  .home-info-desc {
+    margin: 0;
+    padding: 0 8%;
+    text-align: center;
+  }
+  .home-info-desc p {
+    width: 84%;
+    margin: 4% 8%;
+  }
+  .home-info-right {
+    width: 55%;
+    float: left;
+  }
+  .home-info-data {
+    padding: 6% 3%;
+    padding-left: 0;
+    margin-right: 13%;
+  }
+  .home-info-data p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 686px) {
+  .home-info-heading {
+    font-size: 32px;
+  }
+  .home-info-image img {
+    height: 180px;
+  }
+  .home-info-data p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 858px) {
+  .home-info-image {
+    margin: 4% 4%;
+  }
+  .home-info-image img {
+    height: 230px;
+  }
+  .home-info-desc {
+    padding: 0 3%;
+  }
+  .home-info-desc p {
+    font-size: 15px;
+  }
+  .home-info-data p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1152px) {
+  .home-info-heading {
+    font-size: 40px;
+  }
+  .home-info-image img {
+    height: 260px;
+  }
+  .home-info-data p {
+    font-size: 20px;
+  }
+}
+
+/***************************************** parallax and counter section ***************************************/
+
+.home-counters {
+  color: white;
+  height: 300px;
+}
+.home-counters .container {
+  display: grid;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  height: 300px;
+}
+@media (min-width: 767px) {
+  .home-counters {
+    height: 200px;
+    padding-top: 10px;
+  }
+  .home-counters .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/***************************************** footer section *************************************/
+
+.footer {
+  position: relative;
+  background-color: #000032;
+  color: #d3d3d3;
+  z-index: 0;
+}
+
+.footer .footer-content {
+  display: block;
+  padding-bottom: 100px;
+}
+
+.footer .footer-content .footer-section {
+  padding: 20px 15%;
+}
+
+.footer .footer-heading {
+  font-size: 25px;
+}
+
+.footer .services ul {
+  list-style: none;
+}
+
+.footer .services ul li {
+  padding: 8px 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .footer-content .sponsors .sponsors-images {
+  margin-top: 30px;
+}
+.footer .footer-content .sponsors .sponsors-images span {
+  display: block;
+  margin: 20px 0;
+}
+.footer .footer-content .sponsors .sponsors-images span img {
+  width: 180px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.footer .footer-content .social-media p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer .footer-content .social-media .icons1 {
+  margin-top: 20px;
+}
+
+.footer .footer-content .social-media .icons1 span {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.footer .footer-content .social-media .icons2 {
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.footer .footer-content .social-media .icons2 a {
+  margin-right: 15px;
+}
+
+.footer .footer-bottom {
+  width: 100%;
+  text-align: center;
+  background-color: #000020;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  padding: 14px 0px;
+  color: white;
+  font-size: 12px;
+}
+
+@media (min-width: 700px) {
+  .footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 908px) {
+  .footer .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
